@@ -1,0 +1,103 @@
+/* Fondo degradado rojo-negro animado */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #d81b60, #000000, #8e0038, #1a1a1a);
+    background-size: 400% 400%;
+    animation: moverFondo 15s ease infinite;
+    color: #111;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Animación del fondo */
+@keyframes moverFondo {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Nuevo contenedor para centrar todo vertical y horizontal */
+.contenido-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado */
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.encabezado img {
+    width: 80px;
+    height: auto;
+}
+
+/* Título principal */
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Subtítulo */
+p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #eee;
+}
+
+/* Contenedor de botones */
+.opciones {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+/* Botones estilo glass moderno */
+.opcion {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 24px 50px;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.opcion:hover {
+    background-color: #d81b60;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Responsive para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .opciones {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
