@@ -1,90 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBTIS 272 - Modelo Dual</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CBTIS 272 - Prácticas Profesionales</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">CBTIS 272</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="nav-container">
+      <div class="logo-contenedor">
+        <img src="Imagenes/log.jpg" alt="Logo CBTIS 272" class="logo-img" />
+        <span class="logo-text">CBTIS 272</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="hero">
-            <h1>Prácticas Profesionales</h1>
-            <p>CBTIS 272 "Sor Juana Inés de la Cruz"</p>
-            <button class="cta-button">Conócenos</button>
-        </section>
+  <main>
+    <section id="hero">
+      <h1 class="color-animado">Prácticas Profesionales</h1>
+      <p class="color-animado">CBTIS 272 "Sor Juana Inés de la Cruz"</p>
+      <button class="cta-button">Conócenos</button>
+    </section>
 
-        <section id="propiedades">
-            <h2>Practicas Profesionales</h2>
+    <section id="propiedades">
+      <h2>¿Qué son las Prácticas Profesionales?</h2>
+      <p>
+        Las prácticas profesionales permiten al estudiante aplicar sus conocimientos en un entorno laboral real,
+        fortaleciendo sus habilidades técnicas y sociales. Son obligatorias para la titulación.
+      </p>
+      <p>
+        Se realizan en empresas u organizaciones con las que el CBTIS 272 tiene convenio, durante el último semestre.
+      </p>
+      <ul>
+        <li>Fortalece el perfil profesional del estudiante.</li>
+        <li>Mejora la empleabilidad al egresar.</li>
+        <li>Permite el desarrollo de competencias técnicas y sociales.</li>
+      </ul>
+    </section>
 
-            <p></p>
+    <section id="requisitos-practicas" style="margin-top: 3rem;">
+      <h2>Requisitos para Realizar Prácticas Profesionales</h2>
+      <ul>
+        <li>Estar inscrito en el sexto semestre.</li>
+        <li>No tener materias reprobadas.</li>
+        <li>Haber realizado el servicio social.</li>
+        <li>Contar con promedio mínimo de 8.0.</li>
+        <li>Asistir a pláticas informativas y entregar documentación.</li>
+      </ul>
 
-            <p>:</p>
+      <h2>Documentos que debe entregar el estudiante</h2>
+      <ul>
+        <li>Historial académico.</li>
+        <li>Carta de presentación.</li>
+        <li>Copia de credencial del estudiante.</li>
+        <li>Bitácora de actividades.</li>
+        <li>Reporte final.</li>
+        <li>Evaluación del desempeño.</li>
+      </ul>
+    </section>
 
-            <ul>
-                <li></li>
-            </ul>
+    <section>
+      <h2 style="text-align:center;">📷 Fotos destacadas</h2>
+      <div class="carrusel-container">
+        <button class="carrusel-btn izq" onclick="moverCarrusel(-1)">❮</button>
+        <div class="carrusel" id="carrusel">
+          <div class="carrusel-item" onclick="mostrarImagen('Imagenes/practica1.jpg')">
+            <img src="Imagenes/practica1.jpg" alt="Práctica 1" />
+            <p>Práctica administrativa</p>
+          </div>
+          <div class="carrusel-item" onclick="mostrarImagen('Imagenes/practica2.jpg')">
+            <img src="Imagenes/practica2.jpg" alt="Práctica 2" />
+            <p>Capacitación en cocina</p>
+          </div>
+          <div class="carrusel-item" onclick="mostrarImagen('Imagenes/practica3.jpg')">
+            <img src="Imagenes/practica3.jpg" alt="Práctica 3" />
+            <p>Trabajo en equipo</p>
+          </div>
+        </div>
+        <button class="carrusel-btn der" onclick="moverCarrusel(1)">❯</button>
+      </div>
+    </section>
 
-            <div class="propiedades-grid">
-                <div class="propiedad-card">
-                    <img src="" alt="CBTIS 272">
-                </div>
-            </div>
-        </section>
+    <section id="descargas" style="margin-top: 3rem; text-align: center;">
+      <h2>Documentos para Descargar</h2>
+      <p>Formatos para prácticas profesionales:</p>
+      <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
+        <a href="Documentos/Carta_presentacion_practicas.docx" download class="boton-descarga">📄 Carta de Presentación</a>
+        <a href="Documentos/Formato_bitacora_practicas.docx" download class="boton-descarga">📝 Bitácora de Actividades</a>
+        <a href="Documentos/Formato_reporte_final.docx" download class="boton-descarga">📘 Reporte Final</a>
+      </div>
+    </section>
 
-        <section id="requisitos-dual" style="margin-top: 3rem;">
-            <h2>Requisitos para la Modalidad Dual</h2>
-            <ul>
-                <li></li>
-        
-            </ul>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Contacto CBTIS 272</h3>
+          <ul>
+            <li>📍 Av. Kabah, Cancún, Quintana Roo</li>
+            <li>📞 (998) 881-1190</li>
+            <li>✉️ cbtis272@dgeti.sep.gob.mx</li>
+            <li>⏰ Lunes a Viernes, 7:00 a.m. - 2:30 p.m.</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Síguenos</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/cbtis272cancun" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/2111/2111392.png" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/cbtis272/" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CBTIS 272 "Sor Juana Inés de la Cruz" - Todos los derechos reservados</p>
+      </div>
+    </footer>
+  </main>
 
-            <h2>Requisitos para la Documentación del Expediente que tu proporcionas</h2>
-            <ul>
-                <li></li>
-               
-            </ul>
+  <!-- Modal para imagen ampliada -->
+  <div id="modal" class="modal" onclick="cerrarModal()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenAmpliada" class="modal-contenido" />
+  </div>
 
-          
-            </ul>
-        </section>
+  <!-- JS para modal y carrusel -->
+  <script>
+    function mostrarImagen(src) {
+      const modal = document.getElementById("modal");
+      const imgAmpliada = document.getElementById("imagenAmpliada");
+      imgAmpliada.src = src;
+      modal.style.display = "block";
+    }
 
-        <section>
-            <h2>Fotos destacadas</h2>
-            <div class="propiedades-grid">
-                <div class="propiedad-card">
-                    <img src="" alt="Foto destacada">
-                    <p class="descripcion">Alumnos participando en el programa dual</p>
-                    <button>Ver detalles</button>
-                </div>
-            </div>
-        </section>
+    function cerrarModal() {
+      document.getElementById("modal").style.display = "none";
+    }
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <form>
-                <input type="text" placeholder="Nombre" required>
-                <input type="text" placeholder="Grado, Grupo" required>
-                <input type="text" placeholder="Carrera" required>
-                <input type="email" placeholder="Correo electrónico" required>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+    function moverCarrusel(direccion) {
+      const carrusel = document.getElementById("carrusel");
+      const itemWidth = carrusel.querySelector('.carrusel-item').offsetWidth;
+      carrusel.scrollBy({
+        left: direccion * itemWidth,
+        behavior: 'smooth'
+      });
+    }
 
-        <footer>
-            <p>&copy; 2025 CBTIS 272 - Todos los derechos reservados</p>
-        </footer>
-    </main>
+    // Carrusel automático
+    setInterval(() => {
+      const carrusel = document.getElementById('carrusel');
+      const itemWidth = carrusel.querySelector('.carrusel-item').offsetWidth;
+      if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth) {
+        carrusel.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        carrusel.scrollBy({ left: itemWidth, behavior: 'smooth' });
+      }
+    }, 3000);
+  </script>
 </body>
 </html>
-
