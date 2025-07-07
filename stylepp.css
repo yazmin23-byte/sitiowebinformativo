@@ -34,11 +34,7 @@ header {
     gap: 10px;
 }
 
-.logo-img {
-    height: 50px;
-    width: auto;
-    border-radius: 4px;
-}
+
 
 .logo-text {
     font-size: 1.5rem;
@@ -391,32 +387,11 @@ li {
   filter: invert(28%) sepia(88%) saturate(4530%) hue-rotate(349deg) brightness(95%) contrast(110%);
 }
 
-.color-animado {
-  animation: cambiarColor 4s infinite alternate;
-}
-/* Animación de color cambiante en texto */
-@keyframes cambiarColor {
-  0% {
-    color: #ff4ecb;
-  }
-  20% {
-    color: #6e9eff;
-  }
-  40% {
-    color: #4eff8c;
-  }
-  60% {
-    color: #ffe84e;
-  }
-  80% {
-    color: #ff6a4e;
-  }
-  100% {
-    color: #b64eff;
-  }
+/* Ajuste de tamaño mínimo del header y del logo */
+.logo-img {
+    height: 100px;
+    width: auto;
+    border-radius: 4px;
 }
 
-/* Clase para aplicar la animación al texto */
-.color-animado {
-  animation: cambiarColor 3s infinite alternate;
-}
+
