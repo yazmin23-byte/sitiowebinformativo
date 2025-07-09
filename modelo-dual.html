@@ -23,7 +23,6 @@
     <section id="hero">
         <h1 class="color-animado">Programa de Educación del Modelo Dual</h1>
         <p class="color-animado">CBTIS 272 "Sor Juana Inés de la Cruz"</p>
-
     </section>
 
     <section id="propiedades">
@@ -118,8 +117,17 @@
         <h2>Documentos para Descargar</h2>
         <p>Puedes descargar los siguientes documentos importantes:</p>
         <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
-            <a href="Documentos/4°  Ficha de identificación (requisitos establecidos en la convocatoria) cbtis 272 (2).docx" download class="boton-descarga">📄 Ficha De Identificación (Word)</a>
-            <a href="Documentos/CARTA_DE_AUTORIZACION DUAL.docx" download class="boton-descarga">📘 Carta De Autorización Dual</a>
+            <a href="https://github.com/yazmin23-byte/sitiowebinformativo/raw/main/Documentos/4%C2%B0%20Ficha%20de%20identificaci%C3%B3n%20(requisitos%20establecidos%20en%20la%20convocatoria)%20cbtis%20272%20(2).docx"
+               class="boton-descarga"
+               onclick="forzarDescarga(this.href, 'Ficha_Identificacion_CBTIS272.docx'); return false;">
+               📄 Ficha De Identificación (Word)
+            </a>
+
+            <a href="https://github.com/yazmin23-byte/sitiowebinformativo/raw/main/Documentos/CARTA_AUTORIZACION_DUAL.docx"
+               class="boton-descarga"
+               onclick="forzarDescarga(this.href, 'CARTA_AUTORIZACION_DUAL.docx'); return false;">
+               📘 Carta De Autorización Dual
+            </a>
         </div>
     </section>
 
@@ -136,16 +144,14 @@
             </div>
             <div class="footer-column">
                 <h3>Síguenos</h3>
-               <div class="social-icons">
-  <a href="https://www.facebook.com/cbtis272cancun" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111392.png" alt="Facebook">
-</a>
-
-  <a href="https://www.instagram.com/cbtis272/" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
-  </a>
-</div>
-
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/cbtis272cancun" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111392.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/cbtis272/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+                    </a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -160,7 +166,7 @@
   <img id="imagenAmpliada" class="modal-contenido">
 </div>
 
-<!-- JavaScript para imagen ampliada -->
+<!-- JavaScript -->
 <script>
 function mostrarImagen(src) {
   const modal = document.getElementById("modal");
@@ -172,10 +178,16 @@ function mostrarImagen(src) {
 function cerrarModal() {
   document.getElementById("modal").style.display = "none";
 }
-</script>
 
-<!-- JavaScript para carrusel manual y automático -->
-<script>
+function forzarDescarga(url, nombreArchivo) {
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = nombreArchivo;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
 function moverCarrusel(direccion) {
   const carrusel = document.getElementById('carrusel');
   const itemWidth = carrusel.querySelector('.carrusel-item').offsetWidth;
@@ -185,7 +197,6 @@ function moverCarrusel(direccion) {
   });
 }
 
-// Desplazamiento automático
 setInterval(() => {
   const carrusel = document.getElementById('carrusel');
   const itemWidth = carrusel.querySelector('.carrusel-item').offsetWidth;
@@ -196,5 +207,6 @@ setInterval(() => {
   }
 }, 3000);
 </script>
+
 </body>
 </html>
