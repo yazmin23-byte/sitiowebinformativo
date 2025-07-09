@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+<header>
     <nav class="nav-container">
         <div class="logo-contenedor">
             <img src="Imagenes/log.jpg" alt="Logo CBTIS 272" class="logo-img">
@@ -55,7 +55,7 @@
             <li>Ganas de ser exitoso.</li>
             <li>Abierto a aprender.</li>
         </ul>
-        <h2>Requisitos para la Documentación del Expediente que tu proporcionas</h2>
+        <h2>Requisitos para la Documentación del Expediente que tú proporcionas</h2>
         <ul>
             <li>Acta de nacimiento en tamaño carta.</li>
             <li>Vigencia de seguro facultativo.</li>
@@ -80,34 +80,13 @@
         <div class="carrusel-container">
             <button class="carrusel-btn izq" onclick="moverCarrusel(-1)">❮</button>
             <div class="carrusel" id="carrusel">
-                <div class="carrusel-item">
-                    <img src="Imagenes/dual 1.jpg" alt="Foto 1">
-                    <p>Práctica profesional en cocina</p>
-                </div>
-                <div class="carrusel-item">
-                    <img src="Imagenes/dual 2.jpg" alt="Foto 2">
-                    <p>Trabajo colaborativo en áreas prácticas</p>
-                </div>
-                <div class="carrusel-item">
-                    <img src="Imagenes/dual 3.jpg" alt="Foto 3">
-                    <p>Capacitación en oficina administrativa</p>
-                </div>
-                <div class="carrusel-item">
-                    <img src="Imagenes/dual4.jpg" alt="Foto 4">
-                    <p>Visita a empresa colaboradora</p>
-                </div>
-                <div class="carrusel-item">
-                    <img src="Imagenes/dual 6.jpg" alt="Foto 5">
-                    <p>Ejercicio de prácticas en gastronomía</p>
-                </div>
-                <div class="carrusel-item">
-                    <img src="Imagenes/dual 7.jpg" alt="Foto 6">
-                    <p>Actividades</p>
-                </div>
-                <div class="carrusel-item">
-                    <img src="Imagenes/dual 8.jpg" alt="Foto 7">
-                    <p>Práctica en control de insumos</p>
-                </div>
+                <div class="carrusel-item"><img src="Imagenes/dual 1.jpg" alt="Foto 1"><p>Práctica profesional en cocina</p></div>
+                <div class="carrusel-item"><img src="Imagenes/dual 2.jpg" alt="Foto 2"><p>Trabajo colaborativo en áreas prácticas</p></div>
+                <div class="carrusel-item"><img src="Imagenes/dual 3.jpg" alt="Foto 3"><p>Capacitación en oficina administrativa</p></div>
+                <div class="carrusel-item"><img src="Imagenes/dual4.jpg" alt="Foto 4"><p>Visita a empresa colaboradora</p></div>
+                <div class="carrusel-item"><img src="Imagenes/dual 6.jpg" alt="Foto 5"><p>Ejercicio de prácticas en gastronomía</p></div>
+                <div class="carrusel-item"><img src="Imagenes/dual 7.jpg" alt="Foto 6"><p>Actividades</p></div>
+                <div class="carrusel-item"><img src="Imagenes/dual 8.jpg" alt="Foto 7"><p>Práctica en control de insumos</p></div>
             </div>
             <button class="carrusel-btn der" onclick="moverCarrusel(1)">❯</button>
         </div>
@@ -117,15 +96,15 @@
         <h2>Documentos para Descargar</h2>
         <p>Puedes descargar los siguientes documentos importantes:</p>
         <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
-            <a href="https://github.com/yazmin23-byte/sitiowebinformativo/raw/main/Documentos/4%C2%B0%20Ficha%20de%20identificaci%C3%B3n%20(requisitos%20establecidos%20en%20la%20convocatoria)%20cbtis%20272%20(2).docx"
+            <a href="#"
                class="boton-descarga"
-               onclick="forzarDescarga(this.href, 'Ficha_Identificacion_CBTIS272.docx'); return false;">
+               onclick="forzarDescarga('https://github.com/yazmin23-byte/sitiowebinformativo/raw/main/Documentos/4%C2%B0%20Ficha%20de%20identificaci%C3%B3n%20(requisitos%20establecidos%20en%20la%20convocatoria)%20cbtis%20272%20(2).docx', 'Ficha_Identificacion_CBTIS272.docx'); return false;">
                📄 Ficha De Identificación (Word)
             </a>
 
-            <a href="https://github.com/yazmin23-byte/sitiowebinformativo/raw/main/Documentos/CARTA_AUTORIZACION_DUAL.docx"
+            <a href="#"
                class="boton-descarga"
-               onclick="forzarDescarga(this.href, 'CARTA_AUTORIZACION_DUAL.docx'); return false;">
+               onclick="forzarDescarga('https://github.com/yazmin23-byte/sitiowebinformativo/raw/main/Documentos/CARTA_AUTORIZACION_DUAL.docx', 'CARTA_AUTORIZACION_DUAL.docx'); return false;">
                📘 Carta De Autorización Dual
             </a>
         </div>
@@ -136,7 +115,7 @@
             <div class="footer-column">
                 <h3>Contacto CBTIS 272</h3>
                 <ul>
-                    <li>📍 Av. Heberto Castillo Martinez, Smz 255, mz 11, Av Arco Norte 34, 77519 Cancún, Q.Roo </li>
+                    <li>📍 Av. Heberto Castillo Martinez, Smz 255, mz 11, Av Arco Norte 34, 77519 Cancún, Q.Roo</li>
                     <li>📞 (998) 8687219</li>
                     <li>✉️ cbtis272.dir@dgeti.sems.gob.mx</li>
                     <li>⏰ Lunes a Viernes, 7:00 a.m. - 2:30 p.m.</li>
@@ -166,7 +145,7 @@
   <img id="imagenAmpliada" class="modal-contenido">
 </div>
 
-<!-- JavaScript -->
+<!-- Scripts -->
 <script>
 function mostrarImagen(src) {
   const modal = document.getElementById("modal");
@@ -179,22 +158,10 @@ function cerrarModal() {
   document.getElementById("modal").style.display = "none";
 }
 
-function forzarDescarga(url, nombreArchivo) {
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = nombreArchivo;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-}
-
 function moverCarrusel(direccion) {
   const carrusel = document.getElementById('carrusel');
   const itemWidth = carrusel.querySelector('.carrusel-item').offsetWidth;
-  carrusel.scrollBy({
-    left: direccion * itemWidth,
-    behavior: 'smooth'
-  });
+  carrusel.scrollBy({ left: direccion * itemWidth, behavior: 'smooth' });
 }
 
 setInterval(() => {
@@ -206,6 +173,15 @@ setInterval(() => {
     carrusel.scrollBy({ left: itemWidth, behavior: 'smooth' });
   }
 }, 3000);
+
+function forzarDescarga(url, nombreArchivo) {
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = nombreArchivo;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
 </script>
 
 </body>
