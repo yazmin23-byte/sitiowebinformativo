@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -78,38 +79,6 @@ header {
     width: 100%;
 }
 
-/* Hero */
-#hero {
-    background: url('Imagenes/dual\\ hero.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 4rem 2rem;
-    text-align: center;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4);
-}
-
-#hero h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    animation: fadeInDown 1s ease;
-}
-
-#hero p {
-    font-size: 1.2rem;
-    animation: fadeInUp 1s ease;
-}
-
-/* Animaciones */
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 /* Secciones */
 section {
     padding: 3rem 2rem;
@@ -133,7 +102,7 @@ li {
     margin-bottom: 0.7rem;
 }
 
-/* Galería */
+/* Galería / Cards */
 .propiedades-grid {
     display: flex;
     flex-wrap: wrap;
@@ -280,6 +249,74 @@ li {
     color: #aaa;
 }
 
+/* Carrusel y otros elementos de páginas secundarias */
+#requisitos-dual {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-top: 1rem;
+    border-top: 3px solid #9c0d3d;
+}
+
+.carrusel-container {
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.carrusel {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.5s ease;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.carrusel-item {
+    flex: 0 0 450px;
+    background-color: transparent;
+    text-align: center;
+    scroll-snap-align: start;
+    padding: 0;
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.carrusel-item img:hover {
+    transform: scale(1.05);
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #9c0d3d;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.carrusel-btn.izq {
+    left: 10px;
+}
+
+.carrusel-btn.der {
+    right: 10px;
+}
+
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
@@ -292,189 +329,19 @@ li {
     }
 }
 
-#requisitos-dual {
-    background-color: #ffffff;
-    padding: 2rem;
-    margin-top: 1rem;
-    border-top: 3px solid #9c0d3d;
-}
-
-.carrusel-container {
-  position: relative;
-  max-width: 90%;
-  margin: auto;
-  overflow: hidden;
-  padding: 1rem 0;
-}
-
-.carrusel {
-  display: flex;
-  gap: 1rem;
-  transition: transform 0.5s ease;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  scroll-snap-type: x mandatory;
-}
-
-.carrusel-item {
-  flex: 0 0 450px;
-  background-color: transparent;
-  text-align: center;
-  scroll-snap-align: start;
-  padding: 0;
-}
-
-.carrusel-item img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.carrusel-item img:hover {
-  transform: scale(1.05);
-}
-
-.carrusel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #9c0d3d;
-  color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.carrusel-btn.izq { left: 10px; }
-.carrusel-btn.der { right: 10px; }
-
-.social-icons a img:hover {
-  transform: scale(1.2);
-  filter: invert(28%) sepia(88%) saturate(4530%) hue-rotate(349deg) brightness(95%) contrast(110%);
-}
-
-.color-animado {
-  animation: cambiarColor 3s infinite alternate;
-}
-
-@keyframes cambiarColor {
-  0% { color: #ff4ecb; }
-  20% { color: #6e9eff; }
-  40% { color: #4eff8c; }
-  60% { color: #ffe84e; }
-  80% { color: #ff6a4e; }
-  100% { color: #b64eff; }
-}
-
-/* ============================= */
-/* 🎓 Estilos exclusivos - Página de inicio CBTIS 272 */
-/* ============================= */
-:root {
-  --rojo-cbtis: #8B0000;
-  --vino-cbtis: #6B0E2F;
-  --gris-claro: #F5F5F5;
-  --texto: #222222;
-  --blanco: #FFFFFF;
-  --dorado: #C5A600;
-}
-
-body.index {
-  height: 100vh;
-  background: linear-gradient(135deg, var(--rojo-cbtis), var(--vino-cbtis));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blanco);
-  text-align: center;
-}
-
-.inicio-container {
-  padding: 3rem 2.5rem;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(8px);
-  border: 2px solid rgba(197, 166, 0, 0.5);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-  animation: fadeInUp 1.5s ease;
-  max-width: 600px;
-}
-
-.inicio-container .logo {
-  width: 150px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 25px rgba(197, 166, 0, 0.8);
-  transition: transform 0.5s ease;
-}
-
-.inicio-container .logo:hover {
-  transform: scale(1.1);
-}
-
-.inicio-container h1 {
-  font-size: 2.3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.inicio-container h1 span {
-  color: var(--dorado);
-}
-
-.inicio-container p {
-  font-size: 1.1rem;
-  color: var(--gris-claro);
-  margin-bottom: 2rem;
-}
-
-.botones {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.botones .boton {
-  background-color: var(--rojo-cbtis);
-  color: var(--blanco);
-  padding: 0.9rem 2rem;
-  border-radius: 40px;
-  font-weight: 600;
-  text-decoration: none;
-  border: 2px solid var(--dorado);
-  box-shadow: 0 0 15px rgba(197, 166, 0, 0.4);
-  transition: all 0.4s ease;
-}
-
-.botones .boton:hover {
-  background-color: var(--vino-cbtis);
-  color: var(--dorado);
-  transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(197, 166, 0, 0.8);
-}
-
 @media (max-width: 600px) {
-  .inicio-container {
-    width: 90%;
-    padding: 2rem 1.5rem;
-  }
-  .inicio-container h1 {
-    font-size: 1.8rem;
-  }
-  .botones .boton {
-    width: 100%;
-  }
+    .carrusel-item {
+        flex: 0 0 80%;
+    }
+
+    .carrusel-btn {
+        font-size: 1.5rem;
+        padding: 0.3rem 0.7rem;
+    }
 }
 
-/* Fondo de partículas */
-canvas#particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
+/* Efectos sociales */
+.social-icons a img:hover {
+    transform: scale(1.2);
+    filter: invert(28%) sepia(88%) saturate(4530%) hue-rotate(349deg) brightness(95%) contrast(110%);
 }
