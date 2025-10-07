@@ -1,4 +1,4 @@
-/* style.css para index.html */
+/* styleindex.css para index.html */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* Reset básico */
@@ -8,6 +8,7 @@
     box-sizing: border-box;
 }
 
+/* Body principal */
 body.index {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #ff4ecb, #6e9eff);
@@ -21,7 +22,7 @@ body.index {
 
 /* Contenedor principal */
 .inicio-container {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6); /* un poco más visible */
     padding: 3rem 2rem;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
@@ -65,6 +66,7 @@ p {
 }
 
 .boton {
+    display: inline-block; /* asegura que el <a> se comporte como botón */
     background-color: #ff4ecb;
     color: #fff;
     padding: 0.8rem 1.8rem;
@@ -73,6 +75,7 @@ p {
     border-radius: 30px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: center; /* asegura que el texto esté centrado */
 }
 
 .boton:hover {
