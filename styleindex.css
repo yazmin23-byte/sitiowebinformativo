@@ -1,4 +1,4 @@
-/* styleindex.css para index.html */
+/* style.css para index.html */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* Reset básico */
@@ -46,7 +46,7 @@ h1 {
 }
 
 h1 span {
-    color: #ffe84e; /* dorado */
+    color: #ffe84e;
     animation: colorAnim 3s infinite alternate;
 }
 
@@ -65,7 +65,7 @@ p {
 }
 
 .boton {
-    background-color: #ff4ecb; /* rosa */
+    background-color: #ff4ecb;
     color: #fff;
     padding: 0.8rem 1.8rem;
     text-decoration: none;
@@ -76,7 +76,7 @@ p {
 }
 
 .boton:hover {
-    background-color: #6e9eff; /* azul */
+    background-color: #6e9eff;
     transform: translateY(-3px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.4);
 }
