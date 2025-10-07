@@ -470,3 +470,11 @@ body.index {
     width: 100%;
   }
 }
+
+/* Fondo de partículas */
+canvas#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
