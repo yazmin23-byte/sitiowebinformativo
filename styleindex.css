@@ -1,4 +1,4 @@
-/* style.css para index.html */
+/* styleindex.css para index.html */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* Reset básico */
@@ -8,15 +8,16 @@
     box-sizing: border-box;
 }
 
+/* Cuerpo centrado y fondo */
 body.index {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #ff4ecb, #6e9eff);
-    color: #fff;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     text-align: center;
+    background: linear-gradient(to right, #9c0d3d, #c2185b); /* rojo-dorado */
+    color: #fff;
 }
 
 /* Contenedor principal */
@@ -38,7 +39,7 @@ body.index {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Título y subtítulo */
+/* Título y animación */
 h1 {
     font-size: 2.5rem;
     font-weight: 600;
@@ -46,10 +47,11 @@ h1 {
 }
 
 h1 span {
-    color: #ffe84e;
+    color: #ffd700; /* dorado */
     animation: colorAnim 3s infinite alternate;
 }
 
+/* Subtítulo */
 p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
@@ -65,8 +67,8 @@ p {
 }
 
 .boton {
-    background-color: #ff4ecb;
-    color: #fff;
+    background-color: #9c0d3d; /* rojo */
+    color: #ffd700; /* dorado */
     padding: 0.8rem 1.8rem;
     text-decoration: none;
     font-weight: 600;
@@ -76,18 +78,18 @@ p {
 }
 
 .boton:hover {
-    background-color: #6e9eff;
+    background-color: #c2185b; /* hover más claro */
     transform: translateY(-3px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.4);
 }
 
 /* Animación de color en el título */
 @keyframes colorAnim {
-    0% { color: #ff4ecb; }
-    25% { color: #6e9eff; }
-    50% { color: #4eff8c; }
-    75% { color: #ffe84e; }
-    100% { color: #ff6a4e; }
+    0% { color: #ffd700; }
+    25% { color: #ffcc00; }
+    50% { color: #ffee44; }
+    75% { color: #ffd700; }
+    100% { color: #ffdd00; }
 }
 
 /* Responsive */
