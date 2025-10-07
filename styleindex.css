@@ -1,14 +1,13 @@
-/* styleindex.css para index.html */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* Variables de colores */
 :root {
-  --rojo-cbtis: #8B0000;
-  --vino-cbtis: #6B0E2F;
-  --gris-claro: #F5F5F5;
-  --texto: #222222;
-  --blanco: #FFFFFF;
-  --acento-dorado: #C5A600;
+    --rojo-cbtis: #8B0000;
+    --vino-cbtis: #6B0E2F;
+    --gris-claro: #F5F5F5;
+    --texto: #222222;
+    --blanco: #FFFFFF;
+    --acento-dorado: #C5A600;
 }
 
 /* Reset básico */
@@ -20,7 +19,7 @@
 
 body.index {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #8B0000, #6B0E2F);
+    background: linear-gradient(to right, var(--rojo-cbtis), var(--vino-cbtis));
     color: var(--blanco);
     display: flex;
     justify-content: center;
@@ -31,21 +30,21 @@ body.index {
     position: relative;
 }
 
-/* Bolitas doradas flotando */
+/* Bolitas flotantes doradas */
 .bolita {
     position: absolute;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background-color: var(--acento-dorado);
     border-radius: 50%;
-    opacity: 0.7;
-    animation: flotar 10s infinite linear;
+    opacity: 0.8;
+    animation: flotar 8s linear infinite;
 }
 
 @keyframes flotar {
-    0% { transform: translateY(0) translateX(0); }
-    50% { transform: translateY(-600px) translateX(100px); }
-    100% { transform: translateY(0) translateX(0); }
+    0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-100px) translateX(50px); opacity: 0; }
 }
 
 /* Contenedor principal */
@@ -54,10 +53,10 @@ body.index {
     padding: 3rem 2rem;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    max-width: 600px;
+    max-width: 500px;
     width: 90%;
     position: relative;
-    z-index: 1;
+    z-index: 10; /* Que esté sobre las bolitas */
 }
 
 /* Logo */
@@ -65,7 +64,7 @@ body.index {
     width: 150px;
     margin-bottom: 1.5rem;
     border-radius: 10px;
-    border: 2px solid var(--acento-dorado);
+    border: 2px solid var(--blanco);
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
@@ -74,7 +73,6 @@ h1 {
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--blanco);
 }
 
 h1 span {
@@ -86,10 +84,9 @@ p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     font-weight: 300;
-    color: var(--blanco);
 }
 
-/* Botones */
+/* Botones horizontales con borde dorado */
 .botones {
     display: flex;
     justify-content: center;
@@ -113,16 +110,13 @@ p {
     background-color: var(--vino-cbtis);
     transform: translateY(-3px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.4);
-    color: var(--acento-dorado);
 }
 
 /* Animación de color en el título */
 @keyframes colorAnim {
-    0% { color: #ff4ecb; }
-    25% { color: #6e9eff; }
-    50% { color: #4eff8c; }
-    75% { color: #ffe84e; }
-    100% { color: #ff6a4e; }
+    0% { color: var(--acento-dorado); }
+    50% { color: #FFD700; }
+    100% { color: var(--blanco); }
 }
 
 /* Responsive */
