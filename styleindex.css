@@ -1,140 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* Variables de colores */
-:root {
-    --rojo-cbtis: #8B0000;
-    --vino-cbtis: #6B0E2F;
-    --gris-claro: #F5F5F5;
-    --texto: #222222;
-    --blanco: #FFFFFF;
-    --acento-dorado: #C5A600;
+/* === Fondo con degradado animado === */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #7b0000, #b30000, #6a0d0d, #9b0000);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-body.index {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, var(--rojo-cbtis), var(--vino-cbtis));
-    color: var(--blanco);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
+/* === Tarjeta central === */
+.card {
+  background: rgba(30, 0, 0, 0.9);
+  border-radius: 25px;
+  padding: 40px 50px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.2);
+  transform: scale(0.9);
+  animation: fadeIn 1.2s ease forwards;
 }
 
-/* Bolitas flotantes doradas */
-.bolita {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: var(--acento-dorado);
-    border-radius: 50%;
-    opacity: 0.8;
-    animation: flotar 8s linear infinite;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-@keyframes flotar {
-    0% { transform: translateY(100vh) translateX(0); opacity: 0; }
-    50% { opacity: 0.8; }
-    100% { transform: translateY(-100px) translateX(50px); opacity: 0; }
+.card img {
+  width: 130px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
 }
 
-/* Contenedor principal */
-.inicio-container {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 3rem 2rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    max-width: 500px;
-    width: 90%;
-    position: relative;
-    z-index: 10; /* Que esté sobre las bolitas */
+.card h1 {
+  font-size: 2em;
+  margin: 10px 0;
+  color: #ffffff;
 }
 
-/* Logo */
-.logo {
-    width: 150px;
-    margin-bottom: 1.5rem;
-    border-radius: 10px;
-    border: 2px solid var(--blanco);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+.card h1 span {
+  color: #ffd700;
+  font-weight: 700;
 }
 
-/* Título y subtítulo */
-h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+.card h2 {
+  color: #ffd700;
+  font-weight: 700;
+  margin-top: 5px;
 }
 
-h1 span {
-    color: var(--acento-dorado);
-    animation: colorAnim 3s infinite alternate;
+.card p {
+  color: #ddd;
+  font-size: 1em;
+  margin-bottom: 30px;
 }
 
-p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    font-weight: 300;
+/* === Botones === */
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  margin: 10px;
+  font-size: 1em;
+  color: #fff;
+  background: linear-gradient(90deg, #ffb300, #ff6600);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.4);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Botones horizontales con borde dorado */
-.botones {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: nowrap; /* horizontal */
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(255, 200, 50, 0.8);
+  background: linear-gradient(90deg, #ffd700, #ff6600);
 }
 
-.boton {
-    background-color: var(--rojo-cbtis);
-    color: var(--blanco);
-    padding: 0.8rem 1.8rem;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 30px;
-    border: 2px solid var(--acento-dorado);
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+/* === Efecto de brillo al pasar el mouse === */
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transition: width 0.4s;
+  border-radius: 12px;
 }
 
-.boton:hover {
-    background-color: var(--vino-cbtis);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
-}
-
-/* Animación de color en el título */
-@keyframes colorAnim {
-    0% { color: var(--acento-dorado); }
-    50% { color: #FFD700; }
-    100% { color: var(--blanco); }
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .botones {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .boton {
-        width: 100%;
-    }
+.btn:hover::after {
+  width: 100%;
 }
