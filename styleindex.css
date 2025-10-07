@@ -1,113 +1,124 @@
-/* styleindex.css para index.html */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* styleindex.css - CBTIS 272: diseño elegante e institucional */
+
+/* Paleta de colores */
+:root {
+  --rojo-cbtis: #8B0000;
+  --vino-cbtis: #6B0E2F;
+  --gris-claro: #F5F5F5;
+  --texto: #222222;
+  --blanco: #FFFFFF;
+  --acento-dorado: #C5A600;
+}
 
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Cuerpo centrado y fondo */
+/* Body */
 body.index {
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(to right, #9c0d3d, #c2185b); /* rojo-dorado */
-    color: #fff;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--gris-claro);
+  color: var(--texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
 /* Contenedor principal */
 .inicio-container {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 3rem 2rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    max-width: 500px;
-    width: 90%;
+  background-color: var(--blanco);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  border: 2px solid var(--acento-dorado);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  max-width: 500px;
+  width: 90%;
 }
 
 /* Logo */
 .logo {
-    width: 150px;
-    margin-bottom: 1.5rem;
-    border-radius: 10px;
-    border: 2px solid #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  width: 150px;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid var(--rojo-cbtis);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Título y animación */
+/* Título y subtítulo */
 h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--rojo-cbtis);
 }
 
 h1 span {
-    color: #ffd700; /* dorado */
-    animation: colorAnim 3s infinite alternate;
+  color: var(--acento-dorado);
 }
 
-/* Subtítulo */
 p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    font-weight: 300;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
 }
 
 /* Botones */
 .botones {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .boton {
-    background-color: #9c0d3d; /* rojo */
-    color: #ffd700; /* dorado */
-    padding: 0.8rem 1.8rem;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background-color: var(--rojo-cbtis);
+  color: var(--blanco);
+  padding: 0.8rem 1.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .boton:hover {
-    background-color: #c2185b; /* hover más claro */
-    transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  background-color: var(--vino-cbtis);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
 }
 
-/* Animación de color en el título */
-@keyframes colorAnim {
-    0% { color: #ffd700; }
-    25% { color: #ffcc00; }
-    50% { color: #ffee44; }
-    75% { color: #ffd700; }
-    100% { color: #ffdd00; }
+/* Animación color en textos si se quiere */
+.color-animado {
+  animation: cambiarColor 3s infinite alternate;
+}
+
+@keyframes cambiarColor {
+  0% { color: var(--rojo-cbtis); }
+  50% { color: var(--acento-dorado); }
+  100% { color: var(--rojo-cbtis); }
 }
 
 /* Responsive */
 @media (max-width: 600px) {
-    h1 {
-        font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    p {
-        font-size: 1rem;
-    }
+  p {
+    font-size: 1rem;
+  }
 
-    .botones {
-        flex-direction: column;
-        gap: 1rem;
-    }
+  .botones {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    .boton {
-        width: 100%;
-    }
+  .boton {
+    width: 100%;
+  }
 }
