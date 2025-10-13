@@ -1,14 +1,15 @@
-/* === Fondo con degradado animado === */
+/* === Fondo con degradado institucional animado === */
 body {
   margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(-45deg, #7b0000, #b30000, #6a0d0d, #9b0000);
+  background: linear-gradient(-45deg, #6b0e2f, #8b0000, #9c0d3d, #5e0000);
   background-size: 400% 400%;
   animation: gradientBG 10s ease infinite;
   font-family: "Poppins", sans-serif;
+  color: #222;
 }
 
 @keyframes gradientBG {
@@ -17,34 +18,40 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* === Tarjeta central === */
+/* === Tarjeta central (contenedor principal) === */
 .card {
-  background: rgba(30, 0, 0, 0.9);
+  background: rgba(25, 0, 0, 0.92);
   border-radius: 25px;
-  padding: 40px 50px;
+  padding: 40px 60px;
   text-align: center;
   color: white;
-  box-shadow: 0 0 40px rgba(255, 215, 0, 0.2);
-  transform: scale(0.9);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
+  transform: scale(0.95);
   animation: fadeIn 1.2s ease forwards;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  from { opacity: 0; transform: translateY(40px) scale(0.9); }
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+/* === Logo === */
 .card img {
   width: 130px;
-  margin-bottom: 15px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
 }
 
+/* === Títulos === */
 .card h1 {
-  font-size: 2em;
+  font-size: 2.4em;
   margin: 10px 0;
-  color: #ffffff;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
 }
 
 .card h1 span {
@@ -56,26 +63,28 @@ body {
   color: #ffd700;
   font-weight: 700;
   margin-top: 5px;
+  font-size: 1.4em;
 }
 
 .card p {
-  color: #ddd;
+  color: #e5e5e5;
   font-size: 1em;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+  font-weight: 300;
 }
 
 /* === Botones === */
 .btn {
   display: inline-block;
-  padding: 14px 30px;
+  padding: 14px 36px;
   margin: 10px;
   font-size: 1em;
   color: #fff;
-  background: linear-gradient(90deg, #ffb300, #ff6600);
+  background: linear-gradient(90deg, #c5a600, #ffb300);
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(255, 165, 0, 0.4);
+  box-shadow: 0 0 20px rgba(197, 166, 0, 0.4);
   transition: all 0.3s ease;
   text-decoration: none;
   font-weight: 600;
@@ -85,8 +94,8 @@ body {
 
 .btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 30px rgba(255, 200, 50, 0.8);
-  background: linear-gradient(90deg, #ffd700, #ff6600);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+  background: linear-gradient(90deg, #ffd700, #ff8c00);
 }
 
 /* === Efecto de brillo al pasar el mouse === */
@@ -97,11 +106,27 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
   transition: width 0.4s;
   border-radius: 12px;
 }
 
 .btn:hover::after {
   width: 100%;
+}
+
+/* === Adaptación para pantallas pequeñas === */
+@media (max-width: 600px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .card h1 {
+    font-size: 1.8em;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9em;
+  }
 }
