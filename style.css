@@ -345,3 +345,95 @@ li {
     transform: scale(1.2);
     filter: invert(28%) sepia(88%) saturate(4530%) hue-rotate(349deg) brightness(95%) contrast(110%);
 }
+
+.botones-externos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.btn-externo {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.9rem 1.6rem;
+  border-radius: 30px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.btn-externo.drive {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+}
+
+.btn-externo.subpagina {
+  background: linear-gradient(90deg, #c5a600, #ffb300);
+}
+
+.btn-externo:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Estilos para la subpágina de descargas */
+.descargas {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.descargas h2 {
+  color: #9c0d3d;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.tabla-descargas {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: linear-gradient(to right, #9c0d3d, #c2185b);
+  color: white;
+  padding: 18px;
+  font-size: 1.1em;
+}
+
+td {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1em;
+  color: #333;
+}
+
+.word-icon { color: #2b579a; margin-right: 8px; }
+.pdf-icon { color: #d9534f; margin-right: 8px; }
+
+.btn-descargar {
+  display: inline-block;
+  background: linear-gradient(90deg, #c5a600, #ffb300);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-descargar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255,215,0,0.6);
+}
+

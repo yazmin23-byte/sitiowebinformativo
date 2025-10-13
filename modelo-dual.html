@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CBTIS 272 - Modelo Dual</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a2d9d5c56b.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
@@ -91,30 +92,30 @@
 
     <section id="descargas" style="margin-top: 3rem; text-align: center;">
         <h2>Documentos para Descargar</h2>
-        <p>Puedes descargar los siguientes documentos importantes:
-        </p>
+        <p>Puedes descargar los siguientes documentos importantes:</p>
         <p>Nota:</p>
         <ul>
-            <li>Llenar el formato 1 con tus datos, implimirlo y entregarlo en el departamento de vinculación.</li>
+            <li>Llenar el formato 1 con tus datos, imprimirlo y entregarlo en el departamento de vinculación.</li>
             <li>Llenar el formato 2 con la firma del padre o tutor e imprimir y entregar junto con la copia del INE del padre o tutor.</li>
-          </ul>  
+        </ul>  
         
         <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
-        <!-- Enlace corregido a la Ficha de Identificación -->
-   <a href="Documentos/FichaIdentificacion.docx"
-   download="FichaIdentificacion.docx"
-   class="boton-descarga">
-   📘 Formato 1
-</a>
+            <a href="Documentos/FichaIdentificacion.docx" download="FichaIdentificacion.docx" class="boton-descarga">
+                📘 Formato 1
+            </a>
+            <a href="Documentos/CARTA_AUTORIZACION_DUAL.docx" download="CARTA_AUTORIZACION_DUAL.docx" class="boton-descarga">
+                📘 Formato 2
+            </a>
+        </div>
 
-
-
-    <!-- Deja aquí, si quieres, tus otros enlaces -->
-    <a href="Documentos/CARTA_AUTORIZACION_DUAL.docx"
-       download="CARTA_AUTORIZACION_DUAL.docx"
-       class="boton-descarga">
-       📘 Formato 2
-    </a>
+        <!-- NUEVOS BOTONES DRIVE + SUBPÁGINA -->
+        <div class="botones-externos">
+            <a href="https://drive.google.com/drive/folders/TU_ID_DE_CARPETA" target="_blank" class="btn-externo drive">
+                📂 Ver carpeta en Drive
+            </a>
+            <a href="descargas.html" class="btn-externo subpagina">
+                📄 Ir a Descargas
+            </a>
         </div>
     </section>
 
@@ -135,6 +136,39 @@
                     <a href="https://www.facebook.com/cbtis272cancun" target="_blank">
                         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111392.png" alt="Facebook">
                     </a>
+                    <a href="https://www.instagram.com/cbtis272/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CBTIS 272 "Sor Juana Inés de la Cruz" - Todos los derechos reservados</p>
+        </div>
+    </footer>
+</main>
+
+<script>
+function moverCarrusel(direccion) {
+  const carrusel = document.getElementById('carrusel');
+  const itemWidth = carrusel.querySelector('.carrusel-item').offsetWidth;
+  carrusel.scrollBy({ left: direccion * itemWidth, behavior: 'smooth' });
+}
+
+setInterval(() => {
+  const carrusel = document.getElementById('carrusel');
+  const itemWidth = carrusel.querySelector('.carrusel-item').offsetWidth;
+  if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth) {
+    carrusel.scrollTo({ left: 0, behavior: 'smooth' });
+  } else {
+    carrusel.scrollBy({ left: itemWidth, behavior: 'smooth' });
+  }
+}, 3000);
+</script>
+
+</body>
+</html>
+
                     <a href="https://www.instagram.com/cbtis272/" target="_blank">
                         <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
                     </a>
