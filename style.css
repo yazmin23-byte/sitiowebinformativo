@@ -271,6 +271,7 @@ li {
   background: linear-gradient(to right, #9c0d3d, #c2185b);
 }
 
+
 /* Centrado en móviles */
 @media (max-width: 768px) {
   .btn-formulario {
